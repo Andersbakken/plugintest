@@ -1,4 +1,5 @@
 #include <dlfcn.h>
+#include <base.h>
 #include <stdio.h>
 
 int main()
@@ -14,5 +15,14 @@ int main()
         printf("[main.cpp:%d]: if (!sym) {\n", __LINE__); fflush(stdout);
         return 1;
     }
+    CreateShit create = reinterpret_cast<CreateShit>(sym);
+    Shit *shat = create();
+    if (!shat) {
+        printf("[main.cpp:%d]: if (!shat)\n", __LINE__); fflush(stdout);
+        return 1;
+    }
+
+    shat->foo();
+    delete shat;
     return 0;
 }

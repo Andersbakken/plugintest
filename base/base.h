@@ -1,6 +1,8 @@
 #ifndef BASE_H
 #define BASE_H
 
+#include <stdio.h>
+
 struct Shit
 {
     virtual ~Shit() {}
@@ -9,9 +11,10 @@ struct Shit
 
     void inlineFunc()
     {
-
+        printf("[base.h:%d]: void inlineFunc()\n", __LINE__); fflush(stdout);
     }
 };
 
+typedef Shit *(*CreateShit)();
 
 #endif /* BASE_H */
