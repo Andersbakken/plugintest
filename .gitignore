@@ -1,0 +1,12 @@
+/.ninja_deps
+/.ninja_log
+/CMakeCache.txt
+*/CMakeFiles/*
+/plgu
+/CMakeFiles/*
+cmake_install.cmake
+/base/libbase.a
+/build.ninja
+/pluga/libpluga.so
+/rules.ninja
+/compile_commands.json
