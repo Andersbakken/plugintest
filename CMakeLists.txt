@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 2.8)
+include_directories(base)
+add_subdirectory(base)
+add_subdirectory(pluga)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS}")
+add_executable(plgu main.cpp)
+target_link_libraries(plgu base)
